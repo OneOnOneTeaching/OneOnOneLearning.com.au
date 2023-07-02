@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brick-Wall-Background</title>
+
+    <script>
+        const brickWidthPX = 50;
+        const brickHeightPX = 20;
+        // const brickWidthPercent = Math.round(50/window.innerWidth);
+        // const brickHeightPercent = Math.round(20/window.innerHeight);
+        const brickGapPX = 2;
+    </script>
+    <style>
+        :root{
+            --brick-width: 50px;
+            --brick-height: 20px;
+            --brick-gap: 2px;
+        }
+        html {
+            scroll-behavior: smooth;
+            /*  pushed footer to bottom - method 3 */
+                height: 100%;
+            /*  pushed footer to bottom - method 3 */
+        }
+        body{
+            scroll-behavior: smooth;
+        }
+        .brick-wall{
+            position:absolute;
+            background-color: palegoldenrod;
+            /* text-align: center; */
+            left: calc(var(--brick-width)*-1.08);
+        }
+        .brick{
+            background-color: rgb(170, 70, 70);
+            width:var(--brick-width);
+            height:var(--brick-height);
+            margin-left:var(--brick-gap);
+            margin-bottom:var(--brick-gap);
+        }
+        .brick-wall-row{
+            /* position:absolute; */
+            display:flex;
+                /* The item is sized according to its width and height properties. 
+                It is fully inflexible: it neither shrinks nor grows in relation to the flex container. 
+                This is equivalent to setting "flex: 0 0 auto". */
+                    flex: 0 0 auto;
+                /* The item is sized according to its width and height properties. 
+                It is fully inflexible: it neither shrinks nor grows in relation to the flex container. 
+                This is equivalent to setting "flex: 0 0 auto". */
+                margin-left: 0;
+        }
+        .brick-wall-row-even{
+            margin-left: calc(var(--brick-width)/2);
+        }
+    </style>
+</head>
+<body>
+    <div id="brick-wall" class="brick-wall">
+    </div>
+    <script>
+        console.log(window.innerWidth);
+        console.log(window.innerHeight);
+        console.log(Math.round(window.innerWidth/brickWidthPX,0)-1);
+        console.log(Math.round(window.innerHeight/brickHeightPX,0)-1);
+        let brick
+        let adjHeightCount = 0;
+        let adjWidthCount = 0;
+        if (Math.round(window.innerHeight/brickHeightPX,0) % 2 == 0){
+            adjHeightCount=2;
+        }else{
+            adjHeightCount=3;
+        }
+        if (Math.round(window.innerWidth/brickWidthPX,0) % 2 == 0){
+            adjWidthCount=-2;
+        }else{
+            adjWidthCount=-3;
+        }
+        for (x=0; x<Math.round(window.innerHeight/brickHeightPX,0)-adjHeightCount; x++){
+            const brickRow =  document.createElement("div");
+            brickRow.classList.add("brick-wall-row");
+            if (x % 2 == 0){brickRow.classList.add("brick-wall-row-even");}
+            brickRow.setAttribute('id',"R" + x);
+            const brickWall = document.getElementById("brick-wall");
+            brickWall.style.width = Math.round((window.innerWidth)*2) + 'px';
+            brickWall.appendChild(brickRow); 
+            for (i=0; i<Math.round(window.innerWidth/brickWidthPX,0)-adjWidthCount; i++){
+                const brick = document.createElement("div");
+                brick.classList.add("brick");
+                brick.setAttribute('id',"R" + x + "C" + i);
+                // brick.setAttribute('style',"width:" + 50 + "px;height:" + 20 + "px;");
+                const brickWallRow = document.getElementById("R" + x);
+                brickWallRow.appendChild(brick); 
+            }
+        }
+    </script>
+</body>
+</html>

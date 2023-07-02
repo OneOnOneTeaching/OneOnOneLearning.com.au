@@ -1,0 +1,1 @@
+updatable content can be stored here and retieved into a specific locaiton in the web site
