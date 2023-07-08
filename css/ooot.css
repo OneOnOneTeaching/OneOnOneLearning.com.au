@@ -4,10 +4,12 @@
 :root{
 
     --color-header:black;
+    --background-color-header:green;
 
     --color-body:blue;
 
     --color-footer:white;
+    --background-color-footer:green;
 
     --vertical-scroll-indicator-container-width:0.5rem;
     --vertical-scroll-indicator-width:0.25rem;
@@ -145,7 +147,7 @@ body{
     /* font-family: 'Reenie Beanie', cursive; */
     /* font-family: 'Indie Flower', cursive; */
     /* font-size: clamp(2rem,2vw,5rem); */
-    font-size: 2rem;
+    /* font-size: 2rem; */
 
     color:var(--color-body);
     /* user-select: none; */
@@ -172,6 +174,7 @@ body::-webkit-scrollbar{
 }
 header{
 
+
     position:sticky;
     top:0;
     left:0;
@@ -184,11 +187,14 @@ header{
 
     color:var(--color-header);
     text-shadow: 2px 2px white;
+    color:green;
+    text-shadow: 2px 2px chartreuse;
 
     background-color: white;
+    background-color: var(--background-color-header);
     background-image: var(--background-color-header);
 
-    border-bottom:1px solid blue;
+    border-bottom:1px solid chartreuse;
 
     /* border:3px solid blue; */
 
@@ -205,7 +211,7 @@ header{
     width:80px;
     margin-right:10px;
     /* margin:auto; */
-    border:1px solid blue;
+    border:1px solid chartreuse;
     border-radius: 5px;
 }
 .header-bar-icon-container{
@@ -215,7 +221,7 @@ header{
     padding:0.5rem;
     padding-bottom:0rem;
     cursor:pointer;
-    border:1px solid blue;
+    border:1px solid chartreuse;
     border-radius: 5px;
 
 }
@@ -227,7 +233,7 @@ header{
     height:0.2rem;
     width:2.5rem;
     margin-bottom:0.5rem;
-    background-color: blue;
+    background-color: chartreuse;
 }
 .header-bar-name{
 
@@ -273,7 +279,7 @@ nav{
     top:0;
     left:0;
     height:var(--scroll-indicator-height);
-    background: blue;
+    background: chartreuse;
     width:0%;
 
 }
@@ -322,7 +328,7 @@ main{
     top:0;
     left:var(--vertical-scroll-indicator-width);
     width:var(--vertical-scroll-indicator-width);
-    background: blue;
+    background: green;
     height:0%;
 
 }
@@ -709,6 +715,7 @@ footer{
     padding-bottom: 10px;;
 
     color:var(--color-footer);
+    background-color: var(--background-color-footer);
     text-shadow: 2px 2px black;
     
     background-image: var(--background-color-footer);
