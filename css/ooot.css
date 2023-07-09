@@ -6,13 +6,15 @@
     --color-header:black;
     --background-color-header:green;
 
-    --color-body:blue;
+    --color-body:white;
 
     --color-footer:white;
     --background-color-footer:green;
 
     --vertical-scroll-indicator-container-width:0.5rem;
     --vertical-scroll-indicator-width:0.25rem;
+
+    --background-color-body:green ;
 
 }
 
@@ -166,8 +168,8 @@ body::-webkit-scrollbar{
     display:flex;
     flex-direction: column;
 
-    color:var(--background-color-body);
-    background-color:var(--background-color-body);
+    /* color:var(--background-color-body); */
+    /* background-color:var(--background-color-body); */
 
     /* border:3px solid red; */
 
@@ -294,7 +296,7 @@ main{
     margin-left:1rem;
 
     color:var(--color-body);
-    background-color: var(--background-color-body);
+    /* background-color: var(--background-color-body); */
 
     /* border:3px solid red; */
 
@@ -418,14 +420,16 @@ main{
 
 }
 .home-page-background{
-    background-image: url("181124-group-photo-alans-award-presentation-cropped-resized.jpg");
+    background-image: url("../media-partial/AdobeStock_604195089.jpeg");
     background-repeat: no-repeat;
     /* background-position: top; */
-    background-size:contain;
-    /* background-attachment: fixed; */
+    /* background-size:contain; */
+    background-size:cover;
+    background-attachment: fixed;
     /* height:100vw; */
     /* width:100vw; */
-    min-height:700px;
+    min-height:100vh;
+    /* min-width:100vw; */
     /* margin:auto; */
 }
 .content-container{
@@ -445,7 +449,7 @@ section{
     left:0;
 
     color:var(--color-body);
-    background-color: var(--background-color-body);
+    /* background-color: var(--background-color-body); */
 
     /* border:3px solid white; */
 
