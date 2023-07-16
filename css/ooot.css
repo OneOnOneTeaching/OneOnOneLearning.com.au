@@ -7,6 +7,7 @@
     --background-color-header:green;
 
     --color-body:white;
+    --color-body:green;
 
     --color-footer:white;
     --background-color-footer:green;
@@ -32,7 +33,7 @@ h1 {
     margin-bottom: 0.67em;
     margin-left: 0;
     margin-right: 0;
-    font-weight: bold;  
+    font-weight: bold;
 
 }
 h2 {
@@ -331,6 +332,7 @@ main{
     left:var(--vertical-scroll-indicator-width);
     width:var(--vertical-scroll-indicator-width);
     background: green;
+    background: black;
     height:0%;
 
 }
