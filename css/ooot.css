@@ -446,6 +446,10 @@ main{
 @media screen and (orientation: portrait) {
     .home-page-background{
         background-image: url("../media-partial/AdobeStock_348865250 - 10percent.jpeg");
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-attachment: fixed;
+        min-height:100vh;
     }
 }
 .content-container{
