@@ -163,6 +163,15 @@ body::-webkit-scrollbar{
     display: none;
 
 }
+.mySEOelement{
+    position:fixed;
+    top:0;
+    left:0;
+    opacity:0;
+    width:1px;
+    height:1px;
+    z-index: -100;
+}
 
 .site-content-wrapper{
 
@@ -433,6 +442,11 @@ main{
     min-height:100vh;
     /* min-width:100vw; */
     /* margin:auto; */
+}
+@media screen and (orientation: portrait) {
+    .home-page-background{
+        background-image: url("../media-partial/AdobeStock_348865250 - 10percent.jpeg");
+    }
 }
 .content-container{
 
